@@ -1,15 +1,10 @@
-class NegociacoesView {
+class NegociacoesView extends View {
 
     constructor(elemento){
-        this._elemento = elemento
+        super(elemento)
     }
-
-    atualiza(modelo){
-        //innerHTML converte uma string para um elemento do dom 
-        this._elemento.innerHTML = this._template(modelo)
-    }
-
-    _template(modelo){
+    
+    template(modelo){
         return `
         <table class="table table-hover table-bordered">
         <thead>
